@@ -1,0 +1,153 @@
+{% extends 'basic.html' %}
+{% block title %} Home{% endblock %}
+{% block css %}
+          .col-md-3
+          {
+          display: inline-block;
+          margin-left:-4px;
+          }
+          .carousel-indicators .active {
+          background-color: blue;
+            }
+          .col-md-3 img{
+          width:100%;
+          height:auto;
+          }
+          body .carousel-indicator li{
+          background-color: blue;
+          }
+          body .carousel-indicators{
+          bottom: 0;
+          }
+          body .carousel-control-prev-icon,
+          body .carousel-control-next-icon{
+          background-color: blue;
+          }
+           body .no-padding{
+           padding-left: 0,
+           padding-right: 0;
+           }
+{% endblock %}
+{% block body %}
+
+<div class="container">
+<div id="demo" class="carousel slide my-3" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1" ></li>
+    </ul>
+
+    <!--Slideshow starts here -->
+    <div class="container carousel-inner no-padding">
+
+      <div class="carousel-item active">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIVFRUVFRUVFRAQFRAVFRUVFRUXFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQFy0fHh0tLSsrLS0tLS8rLS0tLS0tLS0vLS0tLS8tKy0tLS0tLS0rLS0tLS0tLSstLS0tLS0rLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAACAwEEBQYHAAj/xAA9EAABAwIEAggEBAQFBQAAAAABAAIRAyEEEjFBBVEGImFxgZGhwROx0fAHMkLhJFJighQjU5LSFmOissL/xAAZAQEAAwEBAAAAAAAAAAAAAAACAAEDBAX/xAAiEQEBAAICAgMBAAMAAAAAAAAAAQIRAyESMQQyQSIFYaH/2gAMAwEAAhEDEQA/ALOW6kNTMq8GrxnrDw7E7KowwTYSiqXlU00whRTGiiDAv5JgCEi6ZCUU8AmgIITRorQYF0cIQjGyUEdMKSFLAicE4JbArMJLU+LJQa8wIh9lYLpD0noYNvXOap+mi0jMe/8AlHauVdIel+JxRIc/JT2pU5Df7jq/xTk2FunUuNdMsJROU1A9w/TT63qLLVOIfia7SjSa3+qoZ/8AEfVc4EnTzUVaYGpT8B8201umuLqGP8Rl7gGjwATMN0txH5fzT+txI+S0lwCfQxTmqeMTzrrXAuOVAGuNQmTDmS4gG5tmW+UKmYT2LgeA43lHeQb9k/8AJbPhPxBqDRjYta+3Mgo+NLcrrrApeNFrnRbpbQxIDZy1IvTcb94O4Wx1DooqheLJZFgnOSyFEKqhKIsn1AgIsiuKxF1IGqkhSNSjTJcNVXjVWnaFJIRq4rkJLxdWHhIdqgUVnjVKIT3NQuYiSpUb81LQm1W/NQxiiUBClgRkKWtWdOCw4+aYVFD3RkXVqoSvN2RQvNUQTk0ICE0BKKeCPZCjGitDG7I0I2RtCcExgRFQ3REUoIWLAdM+lDcLTytM1XDqt5dpWU4pj2UKT6rzZontJ2A7SVxDiuOqV6jqtQ9ZxsD+kbALTGbDK6VcViX1XlznFznGS4oMoGtzsAoNvr7I/hnnfc+3ct5GFpFWqdNO5VyrLqU6GBzSPh+KlSCptlXqPD5VWhPJZfA1CCL/AChZ5WtMJL7UMXgMo7VSDr3nvWycapdUOG+y11zZUwu0zx1V3CYh7C2ox3WaZBHPuXbehXSRuMoiT/mMs9u+lj3FcKw5IkeRWxdBuLmhjKZmGVHfDeNutYHzhLKDjfx3sIXiyGm9GQgRVRAdEdQIQLIrhLgvRco3hRFyjSIdukuCe4apJVUoQ8JBF1Zc1KIus6UIc26B4TXalC8Klq1VuneohNqN+aCFSPZVDRdeOykarNpBMGvemEIW6lGrUEL0KQvKLH+6ZsgI0TGi3kriniLI2ISEbElGAWTGoW6ImlOCYESEJWOxAYwuJgAGTySFzj8T+My9tAHqiHEcztPqtEFTMQNt1HFuImvXqVD+txI7GzYeAjyVcVosF0YTUYZ3dWpAO1vREHzpf71KpOParmFbIjc/f33J7DRuHw5qmBp2bn2C2PBdFc4EiFmuh/AmhocQt4o4RoFguTPltvTtw4ZJ25vS6IEEWkdpusnh+jQbqAfALdnYYJNSks7nk0mGLS+IcIaQRFohaJxDBGm+O30XXcdRELROkmFGqXFnfLQ8vHLi1ZzUpx3Fjt3p1Uye5V3u3+7Lt/HA+jujeMFbD0qv89Njj3lon1lZNy0n8L8ZnwTB/puezwnMPmt0GiyaBqFDT0R1dENIWRqyqiiboqjUA1KNKFPVZytPVY7qqUA7RJIunnRJJQpQo7oXojv3ICUVgfogTHaJRVInLZQjbohhZtIMC/gpUj2UJKQF4qWryKzOSYNEobJo0TinkbEBXmlWpYabIkthsilOCaCtQ/FPFGngrGA57WntEEx6LbQVzD8ZMfJoUZsA6oR2nqt/+lpjN0L6c7a+B2k+gKWwyfVJqOuiovgro0wXmDbu81mOBYXNUa3YELX3VjMDcreOh9P4XXdTLj3GPNDkvR8c/rt0fhlOGgBZNoKxfCuNUXQHSwnsJCz7HMI6pB7lx+OnbtXBVerKtwvFgO6mlsJjtFqXH6MtJ5LeMbTbu4eYWr8TcyD1gRpsqksu03K5hXse779lXJ1759Ff4rSh7huCsc9d+N3HnZTVdN/CHGQK1InQsdHeCF1Wg7qrhX4d4vJisv8AqMIHe3rD0B812rB1paCjfZfi2428FFE2Qk2CGm6yNWKogU1FCNKFvVVytFVn6olC5skvTtkp4QpQoC/glkWTQLnuQbIkAoUZQKKCVK9zXgsmkFyRBRCID3SUFQihCqWMaJgKWNEbUoqvSvNKiUAKtS0w2UkpVM2RSlBNJXDfxGxWfGvIfmgAW0bE9Xtgz5rtHEcSKdN9Q6MY51uwEwvnbG1i57ieZ+fPdb8U7Z5+iCUdGmSbKzwvh5quAG5XSeBdHaNODkzO5lPk5JiOHHcmscD4K2mPjV7RcD9tytl/6ncwU8lGGVHZKbnkDMZA5gASRcmFl8ZwcVNR4JNTg7S1jXtcQxwcwNJEOG4IMgrnmct3k6bhZNYq2B4+K13UxAcW5hMZhsDv5rY+H8RbMT+6xtDBZGfCphzaeYuLTldJOpOYGU7D4S7RexmTHlZHPX4WEsn9NodWGWViMXjwZaDznsVmq0/DPctSpMLy5hicxJmRImwGu3NGbIGLdh5Oeo7+2Y9AlNwmFqA/DqE8xmv4tKjjHBg+DSaxh+E+mWkl+YvkZ8zmmHAHUXsIhYbE8LLKVPI2KjCczxPWkyAO5b6mvsw3lv6sV0jwhp1AZlrhY923qsPU+/vzW4cbw5qYeY/KQ4c76rTHuiD92T48txjy46q9wnGGnVY8ateD6hd94VXDmNI0cA4EciAV850ncua7T+H+LL8IydWy3wFx6EBKjj6bs1yFjkhj7BFTcjVnucoJQEr0qlx5V6mqcSq7yhSgdkopk2SnlDIoHdKlNGqSETiSlkJh3S91SPLzUQQhZnBhEEIRx7JKR9EBTP3QFVUe28UVMoRoe9S0pRSSUDVJOqAFJDqTkQKVTN0TSlBpfFhNF45sd8lwH4Gs93ivoKpdpHMFcP47SyV6jdmvdbvJP0W3H7Zcnpf6F0rmf0+8fRdH4cAtI6I03hsupuDCZbVLXBryOq5odoYLfVbzg9lny/Ztw/VmqNEFG/B9iLCkQrRxAAWToUHYONlUMA257K3jKziwlunqVjf8XTbGpIN4a4x3kCyKVk6jT8M9oWtYNozkEbrbK2NpfBzSNJn91q1ItzCq1wILwOqQQQYBFkqqMiMEDsoqcNbyWXZSBEhRXpwqW07jODDWOgWIuFzDilDI6F1zjX5T3LlXSJ3WjkB9Vvw+3N8idMcxsLrn4d1v4Vo5F4P+4+0LkNB9iF1joMQMOzuJPebraufFu7HptIqjRqqzReqJaLrL2fRJLlM6I1IOUh7kwm6rvN0KcFKW5FKCUKsLilI3G6UiZkoSF6VBKiCAuhUg3Xj7rMoIIwgRBRKKPdKd7ppSnK6iRoUARt0KW3RXFJJSxqjdqlhWhjTdSwpYN0TE4NHmXJuleG/i6x5un0H1C6uVzLpi/wDiHx/TPp9Frxe2fJ9S+B8TeK7cOXH4eVzmstAfNyPCfsroGCEwuMPx5ZXZV/ldPgdfSV2HgeLa5rSDIIBBR553svj5daZdryEDH5j1vyg6c/2VtrQVWx2FDxlvBEGDHqufbpi2MQCjZSaeUxO0rQcdwKtRfmZVqGmSJY5xcABqL6d/oslw+i4jMwvENklzS6DNoLfmU5hL6qfjNYjg4Ik/lmcv6VTGDY1wMaHmY74VTGYitALq0CJAPxLWnSLrBN6SVy8M+C582D4DZtyKl46m9N7o4nLHI/NWMRXBCxWCLnsAIg6mYtujrNMQEZ0vbDcarWK5Pj6vxKjncyY7hYLoXTPF/CpkgibATe5PLfc+C0FlS5cbk+kmCungx625PkZdyF0cOeV9B36BdP6J0iymG9/lK0Xgt3AkbzHst/4bVhPK9s8Z02Si6yuUXLFYepZXaD1S1wOUh2iRnRB1gqWa43SSb+KJzkh7ro0oPMgLtUGZQShVpm6BRKgFCkYhcV6UNQqqsco3ITqjOpWZoajQBS1XEpjtPFKf9EwlLcrUlh17ktu/ijbv3IB9Uop5xQDVSUE3URO4RtKXuEYTg15zlyrpLWzOqv8A+4b9lo9F0zG1w1pntv8AuuWdKHNHVGpLTI7Gx6xK0w9jl6avUK2/oLx3L/kPOl2E8tx4LUS20+S9w8n41PLY52geJj6rfLGZY6YY5eOW475hcZICtfFlaZw7FPbE6LMjGwJ81wWO7bYGQ5eOGaJgFs65TA8kjAVgdCsjllTdhRhcZw8O1c6BtZUmYFjDIHjus7XasRjaoG6m7V2n0akCBuvYrEtY0knZY4YsAZj4LR+mfSR0fDYbu3H6R9UscLldRllnMZusR0p4r/iK8A9VhjsJ3+nmowlFsX1InwG3mfRYfBM3VujVMm+y7pJjNOG25XbOcKo5QD96iVtPDaq1bDVbD72We4e+6xy9uiT+Y2rD1LLIUHrBYSqsnh6iratLzXJk2CqNenB1gqQ95Snm6lzkuobqqtBcvEpZPzUPKNXBA3Qlygm6GfdCnDM6FzlEqJRWuu2UnVASjOqBIClmqiVLSpEGR7JbkZPsluSUn6JY+qLN8kAPukpDtSg3REoVEeKLMgm6Ri3kNPzke4SilDjvE6dNjiXCY079Z5LlnG8SalQk77cgtj48YcXOIMG0kkAjkOf3C1Gu+XEnfUrfjjLkv4r4l2gHKfP9oR8GcBXpE6Z2z56pVW58F6kIcDsCPJb/AIw/XZ24OQhFAiyd0Wxgq0WSZMAE9oWVr4Ii6829XT0fcYehnpmWG38uyydLjhFnMPhCX8JR8BTakYrjRNmsM9sLEVczjLz/AGhZV9AKpiGJwawvE8QYPJc642CapJ5BdNxGELtdFhcNwgVa/wAJ2bLUgENyA5hOS7rC5Pmt+LKbY82NsaXQbDe73+/Vepn1CyXEOGvw9R9KoBmYS0wZFrWO6xIMLormjM8Prbdq2LAuWlUa2UrNYLjgBh7T4XCyyxbYZTWq3bCVFlcM9anw7jNFxAzgHk6y2fCOm8rM2QaU9hsFXppzTYKKOcUt+qKUt+qJAcgc6yY9Jeqq49muhDvdRuEMo0jcymdEoFE02RWyCPdCUW6zJ5eapC833UQR08kp/wBUwoHBJQZ+SW3fxRoRqrigFeS8RVDRJmNzyVQ8RpkSH+MO9wlIi6NQte6TYp7RlBF/A987rKPw1aAcwDXCWk3dHYBHqsXxTgz6wvUcRMwcl/T3XVxfG5MpuRycvzeHjurl25zjqz3OIJJN57ErB4J1UmAcoBl23mt7o9CsxGdxDeUi47gn8Q4e2m0YekBNTqg6QI67vBs+MI5ZXC+Ou2uEmc8pdyubY6nD45Nb/wCoKbg6GZptoB9DHarPFGB2JqRoHFv+0R7JnAzlqaAwQRMRry3sVrvplr+mz9BsSWE0jq2C3+pn1EjwK6dhKmYfVc3xPDSx+Vjx8WmSWPAMSLlpmJbeO4jQrc+jfEBWptqAQTZzf5XD8wncSuHkne3bhetMrWwoPYkOw0LJ5UtyzOsRVw57FWdhVmXMSXUUhYLEU+QVHCcLL6ltAQXO8bDxWwYilcNbqdPqpotyDIO8nmu34fx7yZbvqPN/yHzJw4+OP2v/AD/bUuluCY7O8tGd2hY0CY5RYBc0xWHc1xBC630hrCCXWAudVzHjVYPdIEA6DeNye/kvR+RhjPTzfhcueW9+mKJugbUMon8lBYVyaeh5LeHph9swadi78p7Cdll+A8aqYV+V3WpzDmTMdrTssCxlp5WKymBwtTEObTaAScrZJAgbEqeO+k8/HvfTrmHqggEaEAjuKsA2CTgsDkpsaXSWtAJ7hCeWRCy5ODPCbsacXyuLlusb2YEp+qZySnm653VHnFLduiedkDiqWB6W0o36oAjViHsiaEKNipH/2Q==' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Selvarani Elangovan</h5>
+                <h5 class="card-title">సెల్వరాణి ఇలంగోవన్</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="sp" class="btn btn-primary">View profile</a>
+                <a href="sp" class="btn btn-primary">ప్రొఫైల్ చూడు</a>
+            </div>
+          </div>
+       </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='https://www.tractorjunction.com/blog/wp-content/uploads/2021/08/Dnyaneshwar-Bodke-1.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Sri.B.Chatru</h5>
+              <h5 class="card-title">శ్రీ.బి.చత్రు</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='#' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">జ్ఞానేశ్వర్ బోడ్కే</h5>
+              <h5 class="card-title"></h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='#' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='#' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='#' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='#' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+<br></br>
+    <!-- left and right controls for the slide -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+{% endblock %}

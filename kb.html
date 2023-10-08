@@ -1,0 +1,50 @@
+{% extends 'basic.html' %}
+{% block title %} Knowledge base {% endblock %}
+{% block css %}
+        #container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .question {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .answer {
+            display: none;
+            padding: 20px;
+        }
+{% endblock %}
+{% block body %}
+    <div id="container">
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">Introduction to Sustainable Farming</div>
+            <div class="answer">In this comprehensive guide, experts delve into the principles of sustainable farming, exploring practices such as crop rotation, cover cropping, and integrated pest management. Discover how sustainable agriculture contributes to long-term environmental health and resilient farming systems..</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">Managing Pests Without Harmful Chemicals:</div>
+            <div class="answer">Learn from seasoned agricultural experts about alternative methods of pest control that eliminate the reliance on harmful chemical pesticides. This guide explores companion planting, natural predators, and organic solutions to protect your crops and maintain a healthy ecosystem on your farm.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">Weather Patterns and Farming:</div>
+            <div class="answer">Weather plays a crucial role in agricultural success. This article, authored by meteorologists and farming experts, explores the impact of weather patterns on crop growth and provides guidance on adapting farming practices to different climatic conditions. Stay ahead with weather-informed decision-making.</div>
+        </div>
+         <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">Crop Rotation Strategies for Increased Productivity</div>
+                <div class="answer">Crop rotation is a time-tested method for maintaining soil fertility and reducing the risk of pests and diseases. Our experts share practical tips on designing effective crop rotation plans, considering factors like plant families, nutrient needs, and pest cycles. Elevate your farming practices with strategic crop rotation.</div>
+         </div>
+ </div>
+{% endblock %}
